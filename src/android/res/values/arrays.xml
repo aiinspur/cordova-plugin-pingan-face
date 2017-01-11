@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="animationImages">
+        <item>@drawable/eauth_head</item>
+        <item>@drawable/eauth_mouth_open</item>
+    </string-array>
+    
+    <string-array name="IDnumber">
+        <item>"130682198309131758"</item>
+        <item>"320921198410087156"</item>
+        <item>"342425199402144913"</item>
+        <item>"410727199006142612"</item>
+        <item>"410727199006142612"</item>
+        <item>"45212319870127551X"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 可修改位置/大小/字体等， 不要修改id就可以了 -->
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+       
+        <TextView 
+            android:id="@+id/prompt_info_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/eauth_no_premission"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            />
+        <TextView 
+            
+            android:id="@+id/prompt_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center_horizontal"
+            android:text="@string/eauth_sure_premission"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_second"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+        <Button 
+            android:id="@+id/eauth_btn_redetect"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/eauth_button_seletctor_register"
+            android:text="@string/detect_redetect"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    
+    <SurfaceView 
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+</LinearLayout>

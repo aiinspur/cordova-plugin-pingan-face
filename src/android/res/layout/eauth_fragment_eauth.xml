@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a0514e50" >
+
+    <!-- camera -->
+
+    <SurfaceView
+        android:id="@+id/eauth_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <com.pingan.eauthsdk.view.FaceMaskView
+        android:id="@+id/eauth_face_mask_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/paface_bg" />
+
+    <RelativeLayout
+        android:id="@+id/eauth_Animation_area"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/eauth_Animation_igv"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/translucent_background"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/eauth_Animation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/eauth_Animation_igv"
+            android:text="请缓慢张嘴"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/eauth_Animation_igv1"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/translucent_background"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/eauth_Animation_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/eauth_Animation_igv"
+            android:text="请缓慢摇头"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/eauth_face_text_one"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="@string/eauth_face_to_camera"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <com.pingan.eauthsdk.view.CountDownView
+        android:id="@+id/eauth_frame_quality_timer_one"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/area_Tiemr"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/timer_Animation_igv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/eauth_count_down" />
+
+        <TextView
+            android:id="@+id/textView_Timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/eauth_imageview_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="33dp"
+        android:clickable="true"
+        android:contentDescription="@string/eauth_null"
+        android:src="@drawable/eauth_back_icon3" />
+
+    <TextView
+        android:id="@+id/eauth_put_down_glasses"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/eauth_message_put_down_glasses"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+    <include layout="@layout/eauth_for_other" />
+
+    <TextView
+        android:id="@+id/eauth_camera_info"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="20dp" />
+
+</RelativeLayout>

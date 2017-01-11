@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 可修改位置/大小/字体等， 不要修改id就可以了 -->
+    
+    <TextView
+        android:id="@+id/eauth_for_other_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/eauth_null"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>

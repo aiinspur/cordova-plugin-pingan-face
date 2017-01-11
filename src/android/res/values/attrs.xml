@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <declare-styleable name="ImgTextBtn">  
+        <attr name="ImgDraw" format="reference"></attr>  
+        <attr name="ImgDrawWidth" format="dimension"></attr>  
+        <attr name="ImgDrawHeight" format="dimension"></attr>  
+        <attr name="ImgDrawMinWidth" format="dimension"></attr>  
+        <attr name="ImgDrawMinHeight" format="dimension"></attr>  
+        <attr name="ImgDrawMaxWidth" format="dimension"></attr>  
+        <attr name="ImgDrawMaxHeight" format="dimension"></attr>  
+          
+        <attr name="TVText" format="reference|string"></attr>  
+        <attr name="TVTextSize" format="dimension"></attr>  
+        <attr name="TVTextColor" format="reference|color"></attr>  
+    </declare-styleable> 
+</resources>

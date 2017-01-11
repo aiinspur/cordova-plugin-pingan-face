@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string name="launcher_name">人脸识别</string>
+    <string name="activity_name">人脸识别</string>
+    <string name="app_name">人脸识别</string>
+   <!--  <string name="app_name">2.2.4EAuthSDKv1a</string> -->
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="eauth_button">Button</string>
+    <string name="eauth_null"></string>
+    <string name="eauth_ok">确认</string>
+    <string name="eauth_start_detect">开启检测</string>
+    
+    
+    <string name="eauth_detect">活体</string>
+    <string name="eauth_quality">高质量</string>
+    <string name="eauth_open_sound">声音</string>
+    <string name="eauth_live_countdown">倒计时</string>
+    <string name="eauth_wear_glasses">带眼镜</string>
+    
+    <string name="eauth_open_post">后置相机</string>
+    <string name="eauth_real_person">真人</string>
+    <string name="eauth_start">开始</string>
+    <string name="eauth_force_person">视频</string> 
+    
+    
+    <string name="eauth_anim_blink">缓慢眨眼</string>
+    <string name="eauth_anim_yaw">缓慢摇头</string>
+    <string name="eauth_anim_mouth">缓慢张嘴</string>
+    <string name="eauth_anim_pitch">缓慢点头</string>
+
+    <string name="eauth_code_success">检测人脸已通过</string>
+    <string name="eauth_code_actionblend">在做规定动作时, 混入了其他不应该出现的动作</string>
+    <string name="eauth_code_notvideo">发现使用者再使用非连续的图像进行活体攻击</string>
+    <string name="eauth_code_live_timeout">活体检测超时</string>
+    <string name="eauth_code_nolive_timeout">非活体检测超时</string>
+    <string name="eauth_code_quit_sdk">退出SDK</string>
+    <string name="eauth_et_server">输入服务器地址</string>
+    <string name="eauth_demo_textview">人脸采集</string>
+    <string name="eauth_btn_start_detect">开始采集</string>
+    
+    <string name="eauth_detect_timeout">检测超时</string>
+    
+     <string name="eauth_code_timeout_sdk">检测超时，请点击【返回】\n按钮重新测试!</string>
+
+    <string name="eauth_message_put_down_glasses">请摘下眼镜</string>
+    <string name="eauth_message_failure_tips_up">请避免拍摄光线过强或过弱</string>
+    <string name="eauth_message_failure_tips_down">并在规定时间内完成指定动作</string>
+    
+    <string name="eauth_face_to_camera">请正对摄像头</string>
+    <!-- <string name="eauth_face_to_camera">请保持正脸在取景框内</string> -->
+    
+     <string name="eauth_no_premission">摄像头无权限，请重新再试</string>
+     <string name="eauth_sure_premission">请保证拍摄光线良好\n 正对摄像头保持相对静止</string>
+    
+    <string name="eauth_for_example_text">您正在办理平安人寿%1$s业务</string>
+
+    <string name="eauth_path">测试环境名称</string>
+    <string name="eauth_name">测试次数</string>
+    
+    <string name="detect_redetect">重&#160;新&#160;检&#160;测</string>
+    <string name="btn_back_main">返&#160;&#160;&#160;&#160;回</string>
+    <string name="detect_success">检&#160;测&#160;成&#160;功</string>
+    <string name="detect_failed">检&#160;&#160;测&#160;&#160;失&#160;&#160;败</string>
+    <string name="detect_timeout">检&#160;&#160;测&#160;&#160;超&#160;&#160;时</string>
+    
+    
+    <string name="action_account">动作个数</string>
+    <string name="select_image">选择比对照片</string>
+    <string name="save_image">保存人脸到本地(定位问题用)</string>
+    <string name="first_selecte_image">请先选择照片再进行检测</string>
+  
+    <string name="pingan_eauth">平安易认证</string>
+    <string name="demo_product">产品演示</string>
+</resources>

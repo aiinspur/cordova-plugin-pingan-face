@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 可修改位置/大小/字体等， 不要修改id就可以了 -->
+
+    <LinearLayout
+        android:id="@+id/linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+        <ImageView 
+            android:id="@+id/success_mark_iv"
+            android:layout_width="120dip"
+            android:layout_height="130dip"
+            android:layout_marginTop="20dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+        <TextView 
+            android:id="@+id/success_prompt_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/detect_success"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/green"
+            android:textSize="25sp"
+            />
+        <TextView 
+            android:id="@+id/bright_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/blurness_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/eye_degree_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/yaw_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/pitch_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/rotate_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        <TextView 
+            android:id="@+id/mouth_motion_value_info_tv"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dip"
+            android:text="100"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+        
+    </LinearLayout>
+    
+<!--     <LinearLayout 
+        android:id="@+id/information_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/linear_second"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+        <!-- <Button 
+            android:id="@+id/success_finish_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/eauth_button_seletctor_confir"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            /> -->
+        <Button 
+            android:id="@+id/back_main_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/eauth_button_seletctor_register"
+            android:text="@string/btn_back_main"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
