@@ -1,49 +1,37 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-pingan-face" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-pingan-face" version="1.0.0">
     <name>Face</name>
     <js-module name="Face" src="www/Face.js">
-        <clobbers target="face" />
+        <clobbers target="face"/>
     </js-module>
-    
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="Face">
-                <param name="android-package" value="com.pingan.eauthsdk.Api" /></feature>
+                <param name="android-package" value="com.pingan.eauthsdk.Api"/>
+            </feature>
         </config-file>
-        
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:launchMode="singleTask" android:name="com.pingan.eauthsdk.component.MainActivity" android:screenOrientation="portrait">
-            </activity>
-            <activity android:name="com.pingan.eauthsdk.component.EAuthActivity" android:screenOrientation="portrait">
-            </activity>
-            <activity android:name="com.pingan.eauthsdk.BackSuccesActivity" android:screenOrientation="portrait">
-            </activity>
-            <activity android:name="com.pingan.eauthsdk.BackErrorActivity" android:screenOrientation="portrait">
-            </activity>
-            <activity android:name="com.pingan.eauthsdk.BackTimeOutActivity" android:screenOrientation="portrait">
-            </activity>
-            <activity android:name="com.pingan.eauthsdk.ProgressBarActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            </activity>
-            <activity android:launchMode="singleTask" android:name="com.pingan.eauthsdk.ResultActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar">
-            </activity>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:launchMode="singleTask" android:name="com.pingan.eauthsdk.component.MainActivity" android:screenOrientation="portrait"/>
+            <activity android:name="com.pingan.eauthsdk.component.EAuthActivity" android:screenOrientation="portrait"/>
+            <activity android:name="com.pingan.eauthsdk.BackSuccesActivity" android:screenOrientation="portrait"/>
+            <activity android:name="com.pingan.eauthsdk.BackErrorActivity" android:screenOrientation="portrait"/>
+            <activity android:name="com.pingan.eauthsdk.BackTimeOutActivity" android:screenOrientation="portrait"/>
+            <activity android:name="com.pingan.eauthsdk.ProgressBarActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            <activity android:launchMode="singleTask" android:name="com.pingan.eauthsdk.ResultActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         </config-file>
-        
         <config-file parent="/*" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.CAMERA" />
-            <uses-permission android:name="android.permission.RECORD_AUDIO" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-            <uses-feature android:name="android.hardware.camera" />
-            <uses-feature android:name="android.hardware.camera.autofocus" />
+            <uses-permission android:name="android.permission.CAMERA"/>
+            <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+            <uses-feature android:name="android.hardware.camera"/>
+            <uses-feature android:name="android.hardware.camera.autofocus"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
-            
-            
         </config-file>
-        
-        <source-file src="src/android/Face.java" target-dir="src/com/pingan/face/Face" />
-        
+        <source-file src="src/android/Face.java" target-dir="src/com/pingan/face/Face"/>
         <source-file src="src/android/Api.java" target-dir="src/com/pingan/eauthsdk"/>
         <source-file src="src/android/Jump.java" target-dir="src/com/pingan/eauthsdk"/>
         <source-file src="src/android/BackErrorActivity.java" target-dir="src/com/pingan/eauthsdk"/>
@@ -51,7 +39,6 @@
         <source-file src="src/android/BackTimeOutActivity.java" target-dir="src/com/pingan/eauthsdk"/>
         <source-file src="src/android/ProgressBarActivity.java" target-dir="src/com/pingan/eauthsdk"/>
         <source-file src="src/android/ResultActivity.java" target-dir="src/com/pingan/eauthsdk"/>
-        
         <source-file src="src/android/component/EAuthActivity.java" target-dir="src/com/pingan/eauthsdk/component"/>
         <source-file src="src/android/component/EAuthFragment.java" target-dir="src/com/pingan/eauthsdk/component"/>
         <source-file src="src/android/component/LiveDetector.java" target-dir="src/com/pingan/eauthsdk/component"/>
@@ -59,7 +46,6 @@
         <source-file src="src/android/component/MainFragment.java" target-dir="src/com/pingan/eauthsdk/component"/>
         <source-file src="src/android/component/NoPremissionFragment.java" target-dir="src/com/pingan/eauthsdk/component"/>
         <source-file src="src/android/component/SingleFragmentActivity.java" target-dir="src/com/pingan/eauthsdk/component"/>
-        
         <source-file src="src/android/util/BitmapUtil.java" target-dir="src/com/pingan/eauthsdk/util"/>
         <source-file src="src/android/util/CopyFileFromAssets.java" target-dir="src/com/pingan/eauthsdk/util"/>
         <source-file src="src/android/util/CustomCrashHandler.java" target-dir="src/com/pingan/eauthsdk/util"/>
@@ -69,12 +55,10 @@
         <source-file src="src/android/util/ScreenUtil.java" target-dir="src/com/pingan/eauthsdk/util"/>
         <source-file src="src/android/util/SysUtil.java" target-dir="src/com/pingan/eauthsdk/util"/>
         <source-file src="src/android/util/NetImageUrlTrans.java" target-dir="src/com/pingan/eauthsdk/util"/>
-        
         <source-file src="src/android/view/AnimationView.java" target-dir="src/com/pingan/eauthsdk/view"/>
         <source-file src="src/android/view/CountDownView.java" target-dir="src/com/pingan/eauthsdk/view"/>
         <source-file src="src/android/view/FaceMaskView.java" target-dir="src/com/pingan/eauthsdk/view"/>
         <source-file src="src/android/view/OtherView.java" target-dir="src/com/pingan/eauthsdk/view"/>
-        
         <source-file src="src/android/libs/peauthsdk4.1.1a.jar" target-dir="libs"/>
         <source-file src="src/android/libs/arm64-v8a/libface_detect.so" target-dir="libs/arm64-v8a"/>
         <source-file src="src/android/libs/armeabi/libface_detect.so" target-dir="libs/armeabi"/>
@@ -83,17 +67,80 @@
         <source-file src="src/android/libs/mips64/libface_detect.so" target-dir="libs/mips64"/>
         <source-file src="src/android/libs/x86/libface_detect.so" target-dir="libs/x86"/>
         <source-file src="src/android/libs/x86_64/libface_detect.so" target-dir="libs/x86_64"/>
-        
         <source-file src="src/android/res/anim" target-dir="res"/>
         <source-file src="src/android/res/drawable" target-dir="res"/>
         <source-file src="src/android/res/layout" target-dir="res"/>
         <source-file src="src/android/res/menu" target-dir="res"/>
         <source-file src="src/android/res/raw" target-dir="res"/>
-        <source-file src="src/android/res/values" target-dir="res"/> 
-        
-        <source-file src="src/android/assets/haarcascade_frontalface_alt2.xml" target-dir="assets"/> 
+        <source-file src="src/android/res/values" target-dir="res"/>
+        <source-file src="src/android/assets/haarcascade_frontalface_alt2.xml" target-dir="assets"/>
         <source-file src="src/android/assets/3dmodel.bin" target-dir="assets"/>
+        <framework src="com.android.support:support-v4:24.1.1+"/>
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="Face">
+                <param name="ios-package" value="Face"/>
+            </feature>
+        </config-file>
+        <!--<source-file src="src/ios/UI/PABottomView.h" />
+        <source-file src="src/ios/UI/PABottomView.mm" />
+        <source-file src="src/ios/UI/PACircularRing.h" />
+        <source-file src="src/ios/UI/PACircularRing.mm" />
+        <source-file src="src/ios/UI/PAPromptView.h" />
+        <source-file src="src/ios/UI/PAPromptView.mm" />
+        <source-file src="src/ios/UI/SendFailView.h" />
+        <source-file src="src/ios/UI/SendFailView.mm" />
+        <header-file src="src/ios/UI/PABottomView.h" />-->
 
-        <framework src="com.android.support:support-v4:24.1.1+" />
+        <!--
+		<source-file src="src/ios/Toos/PAFaceCheckHome.h" />
+        <source-file src="src/ios/Toos/PAFaceCheckHome.mm" />
+        <source-file src="src/ios/Toos/PAFaceInfo.h" />
+        <source-file src="src/ios/Toos/PAFaceInfo.mm" />
+        <source-file src="src/ios/Toos/PAFaceSetting.h" />
+        <source-file src="src/ios/Toos/PAFaceSetting.mm" />
+        <source-file src="src/ios/Toos/PAZCLTools.h" />
+        <source-file src="src/ios/Toos/PAZCLTools.mm" />
+    -->
+
+        <!--
+		<source-file src="src/ios/PASBJSON/NSData+PABase64.h" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/PAJSON.h" />
+        <source-file src="src/ios/PASBJSON/PASBJsonWriter.m" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/NSData+PABase64.m" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/PASBJSON.h" />
+        <source-file src="src/ios/PASBJSON/PASBJsonParser.h" />
+        <source-file src="src/ios/PASBJSON/NSObject+PASBJSON.h" />
+        <source-file src="src/ios/PASBJSON/PASBJSON.m" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/PASBJsonParser.m" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/NSObject+PASBJSON.m" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/PASBJSON/PASBJsonBase.h" />
+        <source-file src="src/ios/PASBJSON/PASBJsonWriter.h" />
+-->
+<!--
+        <source-file src="src/ios/PASDK/PAZCLDefineTool.h"/>
+        <source-file src="src/ios/PASDK/PALivenessDetector.h"/>
+-->
+		<source-file src="src/ios/Face.m"/>
+        <!--
+        <source-file src="src/ios/PASDK/libPAFaceSDK.a"/>
+        <source-file src="src/ios/PASDK/PALivenessDetector.h"/>
+        <source-file src="src/ios/PASDK/PAZCLDefineTool.h"/>
+        <source-file src="src/ios/PASDK/modelFile/3dmodel.bin" target-dir="modelFile"/>
+        <source-file src="src/ios/PASDK/modelFile/haarcascade_frontalface_alt1.xml" target-dir="modelFile"/>
+        <source-file src="src/ios/PASDK/modelFile/haarcascade_frontalface_alt2.xml" target-dir="modelFile"/>
+        <source-file src="src/ios/PASDK/modelFile/sdk_framework_ios" target-dir="modelFile"/>
+        -->
+        
+        <!--<framework src="src/ios/PASDK/modelFile" custom="true"/>-->
+
+
+        
+        <source-file src="src/ios/myface.bundle"/>
+        <framework  src="src/ios/PASBJSON" custom="true"  />
+        <framework  src="src/ios/UI" custom="true"  />
+        <framework  src="src/ios/Toos" custom="true"  />
+        <framework  src="src/ios/PASDK" custom="true"  />
     </platform>
 </plugin>
