@@ -28,8 +28,7 @@
     
     m_command = command;
     
-    NSString *actionNum ;
-    PAFaceCheckHome *faceVC = [[PAFaceCheckHome alloc] initWithPAcheckWithTheCountdown:YES andTheAdvertising:@"" number0fAction:actionNum voiceSwitch:YES delegate:self];
+    PAFaceCheckHome *faceVC = [[PAFaceCheckHome alloc] initWithPAcheckWithTheCountdown:YES andTheAdvertising:@"" number0fAction:@"0" voiceSwitch:YES delegate:self];
     [self.viewController presentViewController:faceVC animated:YES completion:nil];
 }
 
@@ -102,7 +101,11 @@
             NSData *imageData = UIImageJPEGRepresentation(faceImage,1.0);
             NSArray*paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
             NSString *documentsDirectory=[paths objectAtIndex:0];
-            NSString *savedImagePath=[documentsDirectory stringByAppendingPathComponent:@"faceImage.jpg"];
+            
+            NSString *timeStamp = [self getTime];
+            NSString *fileNameStr = [NSString stringWithFormat:@"%@.jpg",timeStamp];
+
+            NSString *savedImagePath=[documentsDirectory stringByAppendingPathComponent:fileNameStr];
             [imageData writeToFile:savedImagePath atomically:YES];
             
             NSString *imagePath = savedImagePath;
@@ -159,5 +162,13 @@
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
+- (NSString *)getTime{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat: @"yyyyMMddHHmmss"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    
+    NSString *timeDesc = [formatter stringFromDate:[NSDate date]];
+    return timeDesc;
+}
 
 @end
